@@ -26,6 +26,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="./js/scripts.js"></script>
 </head>
 
 <body>
@@ -82,7 +84,6 @@
                             <a href="contact.html" class="nav-item nav-link">Contacto</a>
                         </div>
                         <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Trabajo a Medida</a>
-                        <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Carrito de compras</a>
                     </div>
                 </nav>
             </div>
@@ -125,8 +126,9 @@
                                 <p class="m-0">Ideal para un ambiente de trabajo más relajado pero profesional. Este
                                     traje combina la elegancia con un toque informal, perfecto para reuniones de
                                     negocios informales o eventos sociales.</p>
-                                    <h5>300$</h5>
-                                <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Agregar al carrito</a>
+                                <h5>300$</h5>
+                                <button id="pizza" onclick="agregarProducto('Traje Casual de Negocios',300)">Agregar al
+                                    carrito</button>
                             </div>
                         </div>
                     </div>
@@ -146,8 +148,9 @@
                                 <p class="m-0">Diseñado para eventos formales como galas, ceremonias de premios o cenas
                                     de etiqueta. Este traje destaca por su sofisticación y atención al detalle,
                                     utilizando telas de alta calidad y cortes impecables.</p>
-                                    <h5>800$</h5>
-                                    <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Agregar al carrito</a>
+                                <h5>800$</h5>
+                                <button id="pizza" onclick="agregarProducto('Traje de Gala',800)">Agregar al
+                                    carrito</button>
                             </div>
                         </div>
                     </div>
@@ -173,8 +176,9 @@
                                 <p class="m-0">Ideal para un ambiente de trabajo más relajado pero profesional. Este
                                     traje combina la elegancia con un toque informal, perfecto para reuniones de
                                     negocios informales o eventos sociales.</p>
-                                    <h5>500$</h5>
-                                    <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Agregar al carrito</a>
+                                <h5>500$</h5>
+                                <button id="pizza" onclick="agregarProducto('Traje a Medida',500)">Agregar al
+                                    carrito</button>
                             </div>
                         </div>
                     </div>
@@ -196,8 +200,9 @@
                                     una
                                     elección perfecta para ocasiones formales que requieren un toque de distinción y
                                     refinamiento.</p>
-                                    <h5>250$</h5>
-                                    <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Agregar al carrito</a>
+                                <h5>250$</h5>
+                                <button id="pizza" onclick="agregarProducto('Traje Clásico Elegante',250)">Agregar al
+                                    carrito</button>
                             </div>
                         </div>
                     </div>
@@ -224,8 +229,10 @@
                                     Diseñado para aquellos que buscan destacar con un toque contemporáneo, este traje
                                     combina la artesanía tradicional con cortes y detalles modernos para una apariencia
                                     única y vanguardista.</p>
-                                    <h5>250$</h5>
-                                    <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Agregar al carrito</a>
+                                <h5>250$</h5>
+                                <button id="pizza" onclick="agregarProducto('Traje Moderno Vanguardista',250)">Agregar
+                                    al
+                                    carrito</button>
                             </div>
                         </div>
                     </div>
@@ -247,7 +254,8 @@
                                     distinción, asegurando que tu presencia sea tan inolvidable como el propio evento."
                                 </p>
                                 <h5>500$</h5>
-                                <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Agregar al carrito</a>
+                                <button id="pizza" onclick="agregarProducto('Traje de Bodas',500)">Agregar al
+                                    carrito</button>
                             </div>
                         </div>
                     </div>
@@ -257,6 +265,29 @@
     </div>
     <!-- Features End -->
 
+    <!-- Carrito Start-->
+    <div class="container">
+        <h1>Carrito</h1>
+        <section>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+                <tfoot id="tfoot">
+                    <th>TOTAL</th>
+                    <th></th>
+                    <th id="total">0</th>
+                </tfoot>
+            </table>
+        </section>
+    </div>
+    <!-- Carrito End-->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
